@@ -6,11 +6,11 @@ Author: Charles Ricchio
 
 #include "ECGUIElement.h"
 #include <core/ChVector.h>
-#include <OGRE\Ogre.h>
-#include <OGRE\Overlay\OgreFontManager.h>
-#include <OGRE\Overlay\OgreFont.h>
-#include <OGRE\Overlay\OgreOverlayContainer.h>
-#include <OGRE\Overlay\OgreTextAreaOverlayElement.h>
+#include <OGRE/Ogre.h>
+#include <OGRE/Overlay/OgreFontManager.h>
+#include <OGRE/Overlay/OgreFont.h>
+#include <OGRE/Overlay/OgreOverlayContainer.h>
+#include <OGRE/Overlay/OgreTextAreaOverlayElement.h>
 
 namespace EnvironmentCore {
 
@@ -19,7 +19,7 @@ namespace EnvironmentCore {
 	public:
 
 		ECGUIText(Ogre::Overlay* Overlay);
-		~ECGUIText();
+		virtual ~ECGUIText();
 
 		virtual void setName(std::string Name);
 		virtual void setPosition(double x, double y);

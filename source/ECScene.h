@@ -6,8 +6,8 @@ ECScene is designed to be a layer of abstraction from the Ogre lighting system, 
 
 #pragma once
 
-#include <OGRE\Ogre.h>
-#include <physics\ChSystem.h>
+#include <OGRE/Ogre.h>
+#include <physics/ChSystem.h>
 
 #include "ECBody.h"
 
@@ -54,49 +54,51 @@ namespace EnvironmentCore {
 		//Convenience functions
 		////////
 
-		virtual ECBody& spawnBox(	std::string Name = "", 
-									double mass = 1.0, 
-									chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
-									chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1), 
-									chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0), 
-									bool fixed = false);
+		virtual ECBody& spawnBox(	const std::string& Name = "",
+									const double& mass = 1.0,
+									const chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
+									const chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
+									const chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
+									const bool& fixed = false);
 
-		virtual ECBody& spawnCapsule(std::string Name = ""); // TODO: Actually implement the capsule
+		virtual ECBody& spawnCapsule(const std::string& Name = ""); // TODO: Actually implement the capsule
 
-		virtual ECBody& spawnCone(	std::string Name = "", 
-									double mass = 1.0, 
-									chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0), 
-									chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
-									chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0), 
-									bool fixed = false);
+		virtual ECBody& spawnCone(	const std::string& Name = "",
+		                     const double& mass = 1.0,
+									const chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
+									const chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
+									const chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
+									const bool& fixed = false);
 
-		virtual ECBody& spawnCylinder(	std::string Name = "", 
-										double mass = 1.0, 
-										chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0), 
-										chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1), 
-										chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
-										bool fixed = false);
+		virtual ECBody& spawnCylinder(	const std::string& Name = "",
+										const double& mass = 1.0,
+										const chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
+										const chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
+										const chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
+										const bool& fixed = false);
 
-		virtual ECBody& spawnEllipsoid(	std::string Name = "", 
-										double mass = 1.0, 
-										chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
-										chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1), 
-										chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0), 
-										bool fixed = false);
+		virtual ECBody& spawnEllipsoid(	const std::string& Name = "",
+										const double& mass = 1.0,
+										const chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
+										const chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
+										const chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
+										const bool& fixed = false);
 
-		virtual ECBody& spawnSphere(	std::string Name = "", 
-										double mass = 1.0, 
-										chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0), 
-										double radius = 1.0,
-										bool fixed = false);
+		virtual ECBody& spawnSphere(
+		                        const std::string& Name = "",
+										const double& mass = 1.0,
+										const chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
+										const double& radius = 1.0,
+										const bool& fixed = false);
 
-		virtual ECBody& spawnMesh(	std::string Name = "",
-									double mass = 1.0,
-									chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
-									chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
-									chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
-									std::string FileName = "",
-									bool fixed = false);
+		virtual ECBody& spawnMesh(
+		                     const std::string& Name = "",
+									const double& mass = 1.0,
+									const chrono::ChVector<>& position = chrono::ChVector<>(0, 0, 0),
+									const chrono::ChVector<>& size = chrono::ChVector<>(1, 1, 1),
+									const chrono::ChQuaternion<>& rotation = chrono::ChQuaternion<>(1, 0, 0, 0),
+									const std::string& FileName = "",
+									const bool& fixed = false);
 
 		////////
 		//Various world management functions
@@ -109,7 +111,9 @@ namespace EnvironmentCore {
 		virtual void setSkyBox(std::string FilePath);
 		virtual void disableSkyBox();
 
-		virtual ECBody& loadHeightMap(std::string FilePath, chrono::ChVector<>& Scale = chrono::ChVector<>(1, 1, 1));
+		virtual ECBody& loadHeightMap(
+		      std::string FilePath,
+		      const chrono::ChVector<>& Scale = chrono::ChVector<>(1, 1, 1));
 
 	protected:
 

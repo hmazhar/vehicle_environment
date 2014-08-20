@@ -6,9 +6,9 @@ Contains the prototype for a basic application. Manages things such as window cr
 
 #pragma once
 
-#include <OGRE\Ogre.h>
+#include <OGRE/Ogre.h>
 
-#include <physics\ChSystem.h>
+#include <physics/ChSystem.h>
 
 #include <memory>
 #include <exception>
@@ -29,7 +29,7 @@ namespace EnvironmentCore {
 	public:
 
 		EnvironmentCoreApplication();
-		~EnvironmentCoreApplication();
+		virtual ~EnvironmentCoreApplication();
 
 		virtual int startLoop(std::function<int()> PerFrame);
 		virtual Ogre::RenderWindow* createWindow(std::string Title, uint32_t Width, uint32_t Height, uint8_t FSAA_Level, bool VSync=false, bool Fullscreen=false);

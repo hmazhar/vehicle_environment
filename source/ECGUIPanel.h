@@ -6,7 +6,7 @@ Author: Charles Ricchio
 
 #include "ECGUIElement.h"
 #include <core/ChVector.h>
-#include <OGRE\Overlay\OgreOverlayContainer.h>
+#include <OGRE/Overlay/OgreOverlayContainer.h>
 
 namespace EnvironmentCore {
 
@@ -15,7 +15,7 @@ namespace EnvironmentCore {
 	public:
 
 		ECGUIPanel(Ogre::Overlay* Overlay);
-		~ECGUIPanel();
+		virtual ~ECGUIPanel();
 
 		virtual void setName(std::string Name);
 		virtual void setPosition(double x, double y);

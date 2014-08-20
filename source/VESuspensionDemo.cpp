@@ -126,7 +126,7 @@ namespace VehicleEnvironment {
 
 	}
 
-	void VESuspensionDemo::build(chrono::ChVector<>& Pos) {
+	void VESuspensionDemo::build(const chrono::ChVector<>& Pos) {
 		double wheel_fric = .9;
 		chrono::ChVector<> r;
 		double chassis_mass = 140.0;
@@ -337,7 +337,7 @@ namespace VehicleEnvironment {
 
 	}
 
-	void VESuspensionDemo::reset(chrono::ChVector<>& Pos) {
+	void VESuspensionDemo::reset(const chrono::ChVector<>& Pos) {
 		truss->getChBody()->SetPos(chrono::ChVector<>(0, 1, 0) + Pos);
 		truss->getChBody()->SetRot(chrono::QUNIT);
 		truss->getChBody()->SetPos_dt(chrono::ChVector<>(0, 0, 0));

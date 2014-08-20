@@ -211,12 +211,13 @@ namespace EnvironmentCore {
 	}
 
 
-	ECBody& ECScene::spawnBox(std::string Name,
-		double mass,
-		chrono::ChVector<>& position,
-		chrono::ChVector<>& size,
-		chrono::ChQuaternion<>& rotation,
-		bool fixed) {
+	ECBody& ECScene::spawnBox(
+	   const std::string& Name,
+		const double& mass,
+		const chrono::ChVector<>& position,
+		const chrono::ChVector<>& size,
+		const chrono::ChQuaternion<>& rotation,
+		const bool& fixed) {
 
 		ECBody& _ret = createBody(Name);
 
@@ -239,19 +240,20 @@ namespace EnvironmentCore {
 		return _ret;
 	}
 
-	ECBody& ECScene::spawnCapsule(std::string Name) {
+	ECBody& ECScene::spawnCapsule(const std::string& Name) {
 
 		ECBody& _ret = createBody(Name);
 
 		return _ret;
 	}
 
-	ECBody& ECScene::spawnCone(std::string Name,
-		double mass,
-		chrono::ChVector<>& position,
-		chrono::ChVector<>& size,
-		chrono::ChQuaternion<>& rotation,
-		bool fixed) {
+	ECBody& ECScene::spawnCone(
+	   const std::string& Name,
+		const double& mass,
+		const chrono::ChVector<>& position,
+		const chrono::ChVector<>& size,
+		const chrono::ChQuaternion<>& rotation,
+		const bool& fixed) {
 
 		ECBody& _ret = createBody(Name);
 
@@ -274,12 +276,13 @@ namespace EnvironmentCore {
 		return _ret;
 	}
 
-	ECBody& ECScene::spawnCylinder(std::string Name,
-		double mass,
-		chrono::ChVector<>& position,
-		chrono::ChVector<>& size,
-		chrono::ChQuaternion<>& rotation,
-		bool fixed) {
+	ECBody& ECScene::spawnCylinder(
+	   const std::string& Name,
+		const double& mass,
+		const chrono::ChVector<>& position,
+		const chrono::ChVector<>& size,
+		const chrono::ChQuaternion<>& rotation,
+		const bool& fixed) {
 
 		ECBody& _ret = createBody(Name);
 
@@ -304,12 +307,13 @@ namespace EnvironmentCore {
 		return _ret;
 	}
 
-	ECBody& ECScene::spawnEllipsoid(std::string Name,
-		double mass,
-		chrono::ChVector<>& position,
-		chrono::ChVector<>& size,
-		chrono::ChQuaternion<>& rotation,
-		bool fixed) {
+	ECBody& ECScene::spawnEllipsoid(
+	   const std::string& Name,
+		const double& mass,
+		const chrono::ChVector<>& position,
+		const chrono::ChVector<>& size,
+		const chrono::ChQuaternion<>& rotation,
+		const bool& fixed) {
 
 		ECBody& _ret = createBody(Name);
 
@@ -332,11 +336,12 @@ namespace EnvironmentCore {
 		return _ret;
 	}
 
-	ECBody& ECScene::spawnSphere(std::string Name,
-		double mass,
-		chrono::ChVector<>& position,
-		double radius,
-		bool fixed) {
+	ECBody& ECScene::spawnSphere(
+	   const std::string& Name,
+		const double& mass,
+		const chrono::ChVector<>& position,
+		const double& radius,
+		const bool& fixed) {
 
 		ECBody& _ret = createBody(Name);
 
@@ -358,7 +363,14 @@ namespace EnvironmentCore {
 		return _ret;
 	}
 
-	ECBody& ECScene::spawnMesh(std::string Name, double mass, chrono::ChVector<>& position, chrono::ChVector<>& size, chrono::ChQuaternion<>& rotation, std::string FileName, bool fixed) {
+	ECBody& ECScene::spawnMesh(
+	      const std::string& Name,
+	      const double& mass,
+	      const chrono::ChVector<>& position,
+	      const chrono::ChVector<>& size,
+	      const chrono::ChQuaternion<>& rotation,
+	      const std::string& FileName,
+	      const bool& fixed) {
 		ECBody& _ret = createBody(Name);
 
 		chrono::ChSharedPtr<chrono::ChTriangleMeshShape> _mesh(new chrono::ChTriangleMeshShape);
@@ -433,7 +445,9 @@ namespace EnvironmentCore {
 		m_pSceneManager->setSkyBoxEnabled(false);
 	}
 
-	ECBody& ECScene::loadHeightMap(std::string FilePath, chrono::ChVector<>& Scale) {
+	ECBody& ECScene::loadHeightMap(
+	      std::string FilePath,
+	      const chrono::ChVector<>& Scale) {
 		Ogre::TexturePtr l_tex = Ogre::TextureManager::getSingleton().load(FilePath, Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
 
 		if (l_tex->getFormat() != Ogre::PF_L16 && l_tex->getFormat() != Ogre::PF_L8) {

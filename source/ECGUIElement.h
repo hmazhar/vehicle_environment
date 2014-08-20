@@ -1,7 +1,7 @@
 #pragma once
 
-#include <OGRE\Overlay\OgreOverlay.h>
-#include <OGRE\Overlay\OgreOverlayManager.h>
+#include <OGRE/Overlay/OgreOverlay.h>
+#include <OGRE/Overlay/OgreOverlayManager.h>
 
 namespace EnvironmentCore {
 
@@ -10,7 +10,7 @@ namespace EnvironmentCore {
 	public:
 
 		ECGUIElement(Ogre::Overlay* Overlay);
-		~ECGUIElement();
+		virtual ~ECGUIElement();
 
 		virtual void setName(std::string Name);
 		virtual void setPosition(double x, double y) =0;

@@ -3,8 +3,8 @@ Author: Charles Ricchio
 */
 
 #include "ECGUIPanel.h"
-#include <OGRE\Ogre.h>
-#include <OGRE\OgreScriptCompiler.h>
+#include <OGRE/Ogre.h>
+#include <OGRE/OgreScriptCompiler.h>
 
 namespace EnvironmentCore {
 

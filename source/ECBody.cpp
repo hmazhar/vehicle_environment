@@ -138,7 +138,7 @@ namespace EnvironmentCore {
 		isStaticMesh = false;
 	}
 
-	void ECBody::setMesh(Ogre::ManualObject* Mesh, chrono::ChVector<>& Scale) {
+	void ECBody::setMesh(Ogre::ManualObject* Mesh, const chrono::ChVector<>& Scale) {
 		for (int i = 0; i < m_SceneNodes.size(); i++) {
 			if (m_SceneNodes[i]) {
 				m_pSceneManager->getRootSceneNode()->removeChild(m_SceneNodes[i]);

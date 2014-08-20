@@ -30,7 +30,8 @@ namespace EnvironmentCore {
 	}
 
 	ECGUIText::~ECGUIText() {
-		Ogre::FontManager::getSingleton().remove((Ogre::ResourcePtr)m_Font);
+	   Ogre::ResourcePtr m_Font_res = (Ogre::ResourcePtr)m_Font;
+		Ogre::FontManager::getSingleton().remove(m_Font_res);
 		m_pOverlay->remove2D(m_pPanel);
 		Ogre::OverlayManager::getSingleton().destroyOverlayElement(m_pPanel);
 		Ogre::OverlayManager::getSingleton().destroyOverlayElement(m_pText);

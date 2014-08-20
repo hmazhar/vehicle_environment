@@ -24,7 +24,8 @@ namespace EnvironmentCore {
 	}
 
 	ECGUIButton::~ECGUIButton() {
-		Ogre::FontManager::getSingleton().remove((Ogre::ResourcePtr)m_Font);
+	   Ogre::ResourcePtr m_Font_res = (Ogre::ResourcePtr)m_Font;
+		Ogre::FontManager::getSingleton().remove(m_Font_res);
 		Ogre::OverlayManager::getSingleton().destroyOverlayElement(m_pText);
 	}
 

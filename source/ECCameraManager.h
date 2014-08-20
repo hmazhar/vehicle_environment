@@ -7,9 +7,9 @@ but instead retains points in space and points to orient to in space for easy ac
 
 #pragma once
 
-#include <OGRE\Ogre.h>
-#include <core\ChQuaternion.h>
-#include <core\ChVector.h>
+#include <OGRE/Ogre.h>
+#include <core/ChQuaternion.h>
+#include <core/ChVector.h>
 #include <vector>
 
 namespace EnvironmentCore {
@@ -77,7 +77,7 @@ namespace EnvironmentCore {
 	public:
 
 		ECCameraManager();
-		~ECCameraManager();
+		virtual ~ECCameraManager();
 
 		virtual ECCamera* createCamera(std::string Name=( "Camera" + std::to_string( g_CameraCount ) ) );
 

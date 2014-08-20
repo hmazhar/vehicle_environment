@@ -5,11 +5,11 @@
 #include "ECGUIPanel.h"
 #include "ECGUIText.h"
 #include "ECGUIButton.h"
-#include <OGRE\Ogre.h>
-#include <OGRE\OgrePrerequisites.h>
-#include <OGRE\Overlay\OgreOverlaySystem.h>
-#include <OGRE\Overlay\OgreOverlay.h>
-#include <OGRE\Overlay\OgreOverlayManager.h>
+#include <OGRE/Ogre.h>
+#include <OGRE/OgrePrerequisites.h>
+#include <OGRE/Overlay/OgreOverlaySystem.h>
+#include <OGRE/Overlay/OgreOverlay.h>
+#include <OGRE/Overlay/OgreOverlayManager.h>
 
 namespace EnvironmentCore {
 

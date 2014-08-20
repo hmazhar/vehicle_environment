@@ -8,22 +8,22 @@ ECBody is the basic physical body class. It will set up Ogre scene nodes to disp
 
 #include <vector>
 
-#include <OGRE\Ogre.h>
+#include <OGRE/Ogre.h>
 
-#include <physics\ChSystem.h>
-#include <physics\ChBody.h>
-#include <core\ChSmartpointers.h>
-#include <assets\ChVisualization.h>
-#include <assets\ChBoxShape.h>
-#include <assets\ChCapsuleShape.h>
-#include <assets\ChConeShape.h>
-#include <assets\ChCylinderShape.h>
-#include <assets\ChEllipsoidShape.h>
-#include <assets\ChRoundedBoxShape.h>
-#include <assets\ChRoundedConeShape.h>
-#include <assets\ChRoundedCylinderShape.h>
-#include <assets\ChSphereShape.h>
-#include <assets\ChTriangleMeshShape.h>
+#include <physics/ChSystem.h>
+#include <physics/ChBody.h>
+#include <core/ChSmartpointers.h>
+#include <assets/ChVisualization.h>
+#include <assets/ChBoxShape.h>
+#include <assets/ChCapsuleShape.h>
+#include <assets/ChConeShape.h>
+#include <assets/ChCylinderShape.h>
+#include <assets/ChEllipsoidShape.h>
+#include <assets/ChRoundedBoxShape.h>
+#include <assets/ChRoundedConeShape.h>
+#include <assets/ChRoundedCylinderShape.h>
+#include <assets/ChSphereShape.h>
+#include <assets/ChTriangleMeshShape.h>
 
 namespace EnvironmentCore {
 
@@ -36,7 +36,7 @@ namespace EnvironmentCore {
 
 		virtual void update();
 		virtual void refresh();
-		virtual void setMesh(Ogre::ManualObject* Mesh, chrono::ChVector<>& Scale = chrono::ChVector<>(1, 1, 1));
+		virtual void setMesh(Ogre::ManualObject* Mesh, const chrono::ChVector<>& Scale = chrono::ChVector<>(1, 1, 1));
 
 		virtual chrono::ChSharedBodyPtr getChBody();
 

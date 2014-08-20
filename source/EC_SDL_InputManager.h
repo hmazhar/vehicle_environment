@@ -6,7 +6,7 @@ An input manager based on SDL, as opposed to OIS. Will handle keyboard, mouse, a
 
 #pragma once
 
-#include <OGRE\Ogre.h>
+#include <OGRE/Ogre.h>
 #include <SDL.h>
 
 #define INPUT_DEADZONE  0.25
